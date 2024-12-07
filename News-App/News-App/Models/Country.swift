@@ -1,7 +1,11 @@
-
-
 import Foundation
+import SwiftData
 
-struct Country {
+@Model
+final class Country {
+    var countries: [String]
     
+    init(countries: [String]) {
+        self.countries = countries
+    }
 }

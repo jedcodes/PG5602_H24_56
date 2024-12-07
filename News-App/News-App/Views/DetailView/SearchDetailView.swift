@@ -38,13 +38,18 @@ struct SearchDetailView: View {
                         .font(Font.custom("Poppins-Regular", size: 16))
                         .multilineTextAlignment(.center)
                 }
+                
             }
             
             Spacer()
             
             HStack {
                 DetailButtonView(action: {showBottomSheet.toggle()}, buttonTitle: "Save Article")
-                   
+                    .sheet(isPresented: $showBottomSheet) {
+                        BottomSheetView(article: article)
+                            .presentationDetents([ .large])
+                    }
+                
                 
                 DetailButtonView(action: {print("View more")}, buttonTitle: "View More")
             }
@@ -57,3 +62,7 @@ struct SearchDetailView: View {
 #Preview {
     SearchDetailView(article: SampleData.MockDataTwo)
 }
+
+
+
+

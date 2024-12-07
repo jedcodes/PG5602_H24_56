@@ -1,7 +1,7 @@
-
-
 import Foundation
+import SwiftData
 
+@Model
 class Article {
     var author: String
     var title: String
@@ -22,5 +22,4 @@ class Article {
         self.content = content
         self.source = source
     }
-  
 }

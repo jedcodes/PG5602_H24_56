@@ -15,7 +15,7 @@ struct NetworkImageView: View {
                     .frame(width: imgWidth, height: imgHeight)
                     .cornerRadius(radius)
             case .success(let image):
-                image
+                image 
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: imgWidth, height: imgHeight)

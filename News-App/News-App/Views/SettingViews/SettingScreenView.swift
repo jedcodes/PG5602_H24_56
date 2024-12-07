@@ -49,6 +49,8 @@ struct SettingScreenView: View {
             }
         }
     }
+    
+ 
 }
 
 #Preview {

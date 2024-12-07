@@ -14,6 +14,7 @@ struct News_AppApp: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: [Category.self , Article.self, Country.self])
     }
     init() {
         print(URL.applicationSupportDirectory.path(percentEncoded: false))

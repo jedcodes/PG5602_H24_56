@@ -10,7 +10,7 @@ struct NewsTickerView: View {
             let screenWidth = geometry.size.width
 
             ZStack {
-                HStack(spacing: 50) { // Spacing between headlines
+                HStack{ // Spacing between headlines
                     ForEach(newsItems, id: \.self) { news in
                         Text(news)
                             .font(Font.custom("Poppins-SemiBold", size: 16))
